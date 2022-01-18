@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/home"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/tasks"
+        android:icon="@drawable/list"
+        android:title="@string/tasks" />
+    <item
+        android:id="@+id/createNotesFragment"
+        android:icon="@drawable/create_notes"
+        android:title="dasda" />
+
+    <item
+        android:id="@+id/newsFragment"
+        android:icon="@drawable/bell"
+        android:title="@string/news" />
+
+    <item
+        android:id="@+id/resultsFragment"
+        android:icon="@drawable/pie_chart"
+        android:title="@string/results" />
+
+
+</menu>
