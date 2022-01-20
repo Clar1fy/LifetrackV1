@@ -1,11 +1,13 @@
 package com.example.to_dolistproject.adapter;
 
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.to_dolistproject.interfaces.OnItemClickListener;
 import com.example.to_dolistproject.model.ViewPagerModel;
 import com.example.to_dolistproject.databinding.FragmentBoardBinding;
 
@@ -13,9 +15,11 @@ import java.util.ArrayList;
 
 public class ViewPagerAdapter extends RecyclerView.Adapter<ViewPagerAdapter.ViewPagerHolder> {
     ArrayList<ViewPagerModel> listPager = new ArrayList<>();
+    OnItemClickListener onItemClickListener;
 
-    public ViewPagerAdapter(ArrayList<ViewPagerModel> listPager) {
+    public ViewPagerAdapter(ArrayList<ViewPagerModel> listPager, OnItemClickListener onItemClickListener) {
         this.listPager = listPager;
+        this.onItemClickListener = onItemClickListener;
     }
 
     @NonNull
@@ -46,6 +50,13 @@ public class ViewPagerAdapter extends RecyclerView.Adapter<ViewPagerAdapter.View
             binding.tvTitle.setText(model.getTitle());
             binding.tvDescription.setText(model.getDescription());
             binding.imImage.setImageResource(model.getImage());
+            binding.skipBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    onItemClickListener.onItemClick();
+
+                }
+            });
         }
     }
 }

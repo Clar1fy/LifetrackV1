@@ -2,6 +2,9 @@
     <!-- Base application theme. -->
     <style name="Theme.TodoListProject" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
         <!-- Primary brand color. -->
+        <item name="android:textViewStyle">@style/ProximaBoldTextViewStyle</item>
+        <item name="android:editTextStyle">@style/ProximaThinEditTextStyle</item>
+        <item name="android:buttonStyle">@style/ProximaRegularButtonStyle</item>
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
@@ -12,5 +15,17 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="ProximaBoldTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+    </style>
+
+    <style name="ProximaThinEditTextStyle" parent="android:Widget.EditText">
+        <item name="android:fontFamily">@font/proxima_nova_thin</item>
+    </style>
+
+    <style name="ProximaRegularButtonStyle" parent="android:Widget.Button">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
     </style>
 </resources>
