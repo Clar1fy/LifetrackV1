@@ -1,17 +1,14 @@
 package com.example.to_dolistproject.ui.fragments.boarding;
 
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.to_dolistproject.databinding.FragmentBoardBinding;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 
-import java.util.Calendar;
+import com.example.to_dolistproject.databinding.FragmentBoardBinding;
 
 
 public class BoardFragment extends Fragment {
@@ -23,5 +20,5 @@ public class BoardFragment extends Fragment {
         binding = FragmentBoardBinding.inflate(inflater, container, false);
 
         return binding.getRoot();
-            }
+    }
 }

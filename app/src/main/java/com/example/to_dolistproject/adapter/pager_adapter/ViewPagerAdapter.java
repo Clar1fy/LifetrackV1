@@ -1,4 +1,4 @@
-package com.example.to_dolistproject.adapter;
+package com.example.to_dolistproject.adapter.pager_adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,19 +7,19 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.to_dolistproject.interfaces.OnItemClickListener;
-import com.example.to_dolistproject.model.ViewPagerModel;
 import com.example.to_dolistproject.databinding.FragmentBoardBinding;
+import com.example.to_dolistproject.interfaces.OnPagerClickListener;
+import com.example.to_dolistproject.model.ViewPagerModel;
 
 import java.util.ArrayList;
 
 public class ViewPagerAdapter extends RecyclerView.Adapter<ViewPagerAdapter.ViewPagerHolder> {
     ArrayList<ViewPagerModel> listPager = new ArrayList<>();
-    OnItemClickListener onItemClickListener;
+    OnPagerClickListener onPagerClickListener;
 
-    public ViewPagerAdapter(ArrayList<ViewPagerModel> listPager, OnItemClickListener onItemClickListener) {
+    public ViewPagerAdapter(ArrayList<ViewPagerModel> listPager, OnPagerClickListener onPagerClickListener) {
         this.listPager = listPager;
-        this.onItemClickListener = onItemClickListener;
+        this.onPagerClickListener = onPagerClickListener;
     }
 
     @NonNull
@@ -39,7 +39,7 @@ public class ViewPagerAdapter extends RecyclerView.Adapter<ViewPagerAdapter.View
     }
 
     public class ViewPagerHolder extends RecyclerView.ViewHolder {
-        private FragmentBoardBinding binding;
+        private final FragmentBoardBinding binding;
 
         public ViewPagerHolder(@NonNull FragmentBoardBinding binding) {
             super(binding.getRoot());
@@ -53,7 +53,7 @@ public class ViewPagerAdapter extends RecyclerView.Adapter<ViewPagerAdapter.View
             binding.skipBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    onItemClickListener.onItemClick();
+                    onPagerClickListener.onItemClick();
 
                 }
             });
