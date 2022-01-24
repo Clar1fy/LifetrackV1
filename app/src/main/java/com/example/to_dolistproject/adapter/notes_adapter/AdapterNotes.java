@@ -1,5 +1,6 @@
 package com.example.to_dolistproject.adapter.notes_adapter;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,10 +22,11 @@ public class AdapterNotes extends RecyclerView.Adapter<AdapterNotes.HolderNotes>
     public AdapterNotes(List<NoteModel> list) {
         this.list = list;
 
+
     }
 
-    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
-        this.onItemClickListener = onItemClickListener;
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.onItemClickListener = listener;
     }
 
     @NonNull
@@ -45,7 +47,7 @@ public class AdapterNotes extends RecyclerView.Adapter<AdapterNotes.HolderNotes>
     }
 
     public class HolderNotes extends RecyclerView.ViewHolder {
-        private NotesHolderBinding binding;
+        private final NotesHolderBinding binding;
 
         public HolderNotes(@NonNull NotesHolderBinding binding) {
             super(binding.getRoot());
@@ -56,12 +58,16 @@ public class AdapterNotes extends RecyclerView.Adapter<AdapterNotes.HolderNotes>
             binding.tvTask.setText(noteModel.getTaskName());
             binding.tvDate.setText(noteModel.getDate());
             binding.tvFrequency.setText(noteModel.getFrequency());
-
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View view) {
-                    int position = getAdapterPosition();
-                    onItemClickListener.onItemPress(noteModel);
+                    if (onItemClickListener != null) {
+                        onItemClickListener.onItemPress(noteModel);
+
+                    } else {
+                        Log.d("TAG", "onLongClick: INTERFACE IS NULL ");
+
+                    }
                     return true;
                 }
             });
