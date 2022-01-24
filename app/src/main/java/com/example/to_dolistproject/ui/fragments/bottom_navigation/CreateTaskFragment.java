@@ -13,7 +13,7 @@ import android.widget.RadioButton;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.example.to_dolistproject.App;
+import com.example.to_dolistproject.utilities.App;
 import com.example.to_dolistproject.R;
 import com.example.to_dolistproject.data.NoteModel;
 import com.example.to_dolistproject.databinding.FragmentCreateTaskBinding;

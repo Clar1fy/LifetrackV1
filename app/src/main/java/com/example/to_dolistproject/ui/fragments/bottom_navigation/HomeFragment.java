@@ -13,7 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.example.to_dolistproject.App;
+import com.example.to_dolistproject.utilities.App;
 import com.example.to_dolistproject.R;
 import com.example.to_dolistproject.adapter.notes_adapter.AdapterNotes;
 import com.example.to_dolistproject.data.NoteModel;
