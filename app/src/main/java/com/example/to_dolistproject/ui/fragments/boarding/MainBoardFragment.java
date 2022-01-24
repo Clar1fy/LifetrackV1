@@ -3,31 +3,28 @@ package com.example.to_dolistproject.ui.fragments.boarding;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import com.example.to_dolistproject.R;
-import com.example.to_dolistproject.adapter.ViewPagerAdapter;
+import com.example.to_dolistproject.adapter.pager_adapter.ViewPagerAdapter;
 import com.example.to_dolistproject.databinding.FragmentMainBoardBinding;
-import com.example.to_dolistproject.interfaces.OnItemClickListener;
+import com.example.to_dolistproject.interfaces.OnPagerClickListener;
 import com.example.to_dolistproject.model.ViewPagerModel;
 
 import java.util.ArrayList;
 
 
-public class MainBoardFragment extends Fragment implements OnItemClickListener {
-    private FragmentMainBoardBinding binding;
+public class MainBoardFragment extends Fragment implements OnPagerClickListener {
     ViewPagerAdapter adapter;
-
     ArrayList<ViewPagerModel> list = new ArrayList<>();
-
+    private FragmentMainBoardBinding binding;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -65,5 +62,6 @@ public class MainBoardFragment extends Fragment implements OnItemClickListener {
         sharedPreferences.edit().putBoolean("isShow", true).apply();
 
     }
+
 
 }

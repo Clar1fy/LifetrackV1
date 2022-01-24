@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
 
@@ -13,17 +14,20 @@ import java.util.List;
 public interface NoteDao {
 
 
-    @Insert
-    void insertAll(Note... notes);
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    void insert(NoteModel... noteModels);
 
     @Update
-    void updateNotes(Note note);
+    void updateNotes(NoteModel noteModel);
 
     @Delete
-    void delete(Note note);
+    void delete(NoteModel noteModel);
 
     @Query("SELECT * FROM note_table ORDER BY id ASC")
-    LiveData<List<Note>> getAllData();
+    LiveData<List<NoteModel>> getAllNotes();
+
+    @Query("DELETE  FROM note_table")
+    void deleteAll();
 
 
 }

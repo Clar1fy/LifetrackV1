@@ -5,18 +5,18 @@ public class ViewPagerModel {
     private String description;
     private int image;
 
+    public ViewPagerModel(String title, String description, int image) {
+        this.title = title;
+        this.description = description;
+        this.image = image;
+    }
+
     public String getTitle() {
         return title;
     }
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public ViewPagerModel(String title, String description, int image) {
-        this.title = title;
-        this.description = description;
-        this.image = image;
     }
 
     public String getDescription() {

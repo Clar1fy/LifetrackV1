@@ -13,7 +13,9 @@ import android.widget.RadioButton;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.example.to_dolistproject.App;
 import com.example.to_dolistproject.R;
+import com.example.to_dolistproject.data.NoteModel;
 import com.example.to_dolistproject.databinding.FragmentCreateTaskBinding;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
@@ -22,9 +24,12 @@ import java.util.Calendar;
 
 public class CreateTaskFragment extends BottomSheetDialogFragment implements DatePickerDialog.OnDateSetListener {
     private FragmentCreateTaskBinding binding;
+
     private int startYear;
     private int startMonth;
     private int startDay;
+    private String date;
+    private String frequency;
 
 
     @Override
@@ -41,6 +46,13 @@ public class CreateTaskFragment extends BottomSheetDialogFragment implements Dat
     }
 
     private void initListeners() {
+        binding.btnAddTask.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendToDatabase();
+                dismiss();
+            }
+        });
         binding.tvDateChoose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,6 +68,14 @@ public class CreateTaskFragment extends BottomSheetDialogFragment implements Dat
         });
     }
 
+    private void sendToDatabase() {
+        String text = binding.etTask.getText().toString();
+        NoteModel noteModel = new NoteModel(text, date, frequency);
+        App.getApp().getDb().noteDao().insert(noteModel);
+
+    }
+
+
     public void showDatePickerDialog() {
         Calendar calendar = Calendar.getInstance();
         startYear = calendar.get(Calendar.YEAR);
@@ -68,7 +88,8 @@ public class CreateTaskFragment extends BottomSheetDialogFragment implements Dat
 
     @Override
     public void onDateSet(DatePicker datePicker, int day, int month, int year) {
-        binding.tvDateChoose.setText(day + "/"  + month + 1 + "/" + year);
+        date = day + "/" + month + 1 + "/" + year;
+        binding.tvDateChoose.setText(date);
 
     }
 
@@ -82,7 +103,9 @@ public class CreateTaskFragment extends BottomSheetDialogFragment implements Dat
         never.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                binding.tvFrequencyChoose.setText("Never");
+                String never = "Never";
+                binding.tvFrequencyChoose.setText(never);
+                frequency = never;
                 alertDialog.dismiss();
             }
         });
@@ -90,7 +113,9 @@ public class CreateTaskFragment extends BottomSheetDialogFragment implements Dat
         daily.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                binding.tvFrequencyChoose.setText("Every day");
+                String everyDay = "Every day";
+                binding.tvFrequencyChoose.setText(everyDay);
+                frequency = everyDay;
                 alertDialog.dismiss();
             }
         });
@@ -98,14 +123,19 @@ public class CreateTaskFragment extends BottomSheetDialogFragment implements Dat
         weekly.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                binding.tvFrequencyChoose.setText("Every week");
+                String everyWeek = "Every week";
+                binding.tvFrequencyChoose.setText(everyWeek);
+                frequency = everyWeek;
+                alertDialog.dismiss();
             }
         });
         RadioButton monthly = alertDialog.findViewById(R.id.radioBtn_monthly);
         monthly.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                binding.tvFrequencyChoose.setText("Every month");
+                String everyMonth = "Every month";
+                binding.tvFrequencyChoose.setText(everyMonth);
+                frequency = everyMonth;
                 alertDialog.dismiss();
             }
         });
@@ -113,7 +143,10 @@ public class CreateTaskFragment extends BottomSheetDialogFragment implements Dat
         yearly.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                binding.tvFrequencyChoose.setText("Every year");
+                String everyYear = "Every year";
+                binding.tvFrequencyChoose.setText(everyYear);
+                frequency = everyYear;
+                alertDialog.dismiss();
             }
         });
 

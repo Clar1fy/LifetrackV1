@@ -1,12 +1,12 @@
 package com.example.to_dolistproject.ui.activities;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-
-import android.os.Bundle;
 
 import com.example.to_dolistproject.R;
 import com.example.to_dolistproject.databinding.ActivityMainBinding;
