@@ -1,4 +1,4 @@
-package com.example.to_dolistproject;
+package com.example.to_dolistproject.utilities;
 
 import android.app.Application;
 
