@@ -13,12 +13,14 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.example.to_dolistproject.utilities.App;
 import com.example.to_dolistproject.R;
 import com.example.to_dolistproject.adapter.notes_adapter.AdapterNotes;
 import com.example.to_dolistproject.data.NoteModel;
 import com.example.to_dolistproject.databinding.FragmentHomeBinding;
 import com.example.to_dolistproject.interfaces.OnItemClickListener;
+import com.example.to_dolistproject.utilities.App;
+
+import java.util.List;
 
 public class HomeFragment extends Fragment implements OnItemClickListener {
 
@@ -43,7 +45,7 @@ public class HomeFragment extends Fragment implements OnItemClickListener {
 
     private void initAdapter() {
         App.getApp().getDb().noteDao().getAllNotes().observe(getViewLifecycleOwner(), taskList -> {
-            adapterNotes = new AdapterNotes(taskList);
+            adapterNotes = new AdapterNotes((List<NoteModel>) taskList, this);
             binding.recyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
             binding.recyclerview.setAdapter(adapterNotes);
 

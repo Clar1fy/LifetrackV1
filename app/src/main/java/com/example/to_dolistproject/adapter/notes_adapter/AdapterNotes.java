@@ -19,8 +19,9 @@ public class AdapterNotes extends RecyclerView.Adapter<AdapterNotes.HolderNotes>
     List<NoteModel> list = new ArrayList<>();
     OnItemClickListener onItemClickListener;
 
-    public AdapterNotes(List<NoteModel> list) {
+    public AdapterNotes(List<NoteModel> list, OnItemClickListener onItemClickListener) {
         this.list = list;
+        this.onItemClickListener = onItemClickListener;
 
 
     }
