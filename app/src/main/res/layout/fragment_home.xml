@@ -7,10 +7,20 @@
     android:orientation="vertical"
     tools:context=".ui.fragments.bottom_navigation.HomeFragment">
 
+    <ImageView
+        android:id="@+id/delete_all_notes"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="350dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/delete_all_notes" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="600dp"
+        android:layout_marginTop="5dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/notes_holder" />
 
@@ -25,5 +35,6 @@
         android:backgroundTint="@android:color/holo_red_light"
         android:contentDescription="@string/add_extra_task"
         android:src="@drawable/add_fab" />
+
 
 </LinearLayout>

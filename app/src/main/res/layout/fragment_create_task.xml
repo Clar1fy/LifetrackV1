@@ -10,70 +10,44 @@
 
     <EditText
         android:id="@+id/et_task"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rectangle"
-        android:hint="@string/write_anything_you_want"
-        android:padding="5dp"
-        android:textSize="20sp"
+        style="@style/EditTextTaskFragment"
+        android:autofillHints="false"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_date_hint"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/proxima_nova_bold"
+        style="@style/DueDataAndRepeatHintsTaskFragment"
         android:text="@string/due_date"
-        android:textColor="@android:color/darker_gray"
-        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/et_task" />
 
     <TextView
         android:id="@+id/tv_frequency_hint"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/proxima_nova_bold"
+        style="@style/DueDataAndRepeatHintsTaskFragment"
         android:text="@string/repeat"
-        android:textColor="@android:color/darker_gray"
-        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/et_task" />
 
     <TextView
         android:id="@+id/tv_date_choose"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/rectangle"
-        android:drawableEnd="@drawable/calendar"
-        android:drawablePadding="8dp"
-        android:padding="10dp"
+        style="@style/DueDataAndRepeatTaskFragment"
         android:text="@string/_1_20_22"
-        android:textColor="@android:color/darker_gray"
-        android:textSize="18sp"
+        app:drawableEndCompat="@drawable/calendar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_date_hint" />
 
     <TextView
         android:id="@+id/tv_frequency_choose"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/rectangle"
-        android:drawableEnd="@drawable/create_task_arrow_down"
-        android:drawablePadding="8dp"
-        android:padding="10dp"
+        style="@style/DueDataAndRepeatTaskFragment"
         android:text="@string/every_week"
-        android:textColor="@android:color/darker_gray"
-        android:textSize="18sp"
+        app:drawableEndCompat="@drawable/create_task_arrow_down"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_date_hint" />
 
     <Button
         android:id="@+id/btn_add_task"
+        style="@style/ProximaRegularButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -85,14 +59,14 @@
 
     <TextView
         android:id="@+id/tv_back_to_list"
+        style="@style/ProximaBoldTextViewStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:fontFamily="@font/proxima_nova_thin"
         android:gravity="center"
         android:padding="10dp"
         android:text="@string/back_to_task_list"
-        android:textSize="16sp"
+        android:textSize="@dimen/default_textview_size"
         app:layout_constraintTop_toBottomOf="@id/btn_add_task" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
