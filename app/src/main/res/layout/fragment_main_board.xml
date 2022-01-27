@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-
     tools:context=".ui.fragments.boarding.MainBoardFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -16,10 +15,10 @@
 
     <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
         android:id="@+id/dots_indicator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
         android:layout_gravity="center"
-        app:dotsColor="@color/black"
+        app:dotsColor="@android:color/holo_blue_bright"
         app:dotsCornerRadius="8dp"
         app:dotsSize="16dp"
         app:dotsSpacing="4dp"

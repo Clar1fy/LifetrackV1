@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.TodoListProject" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+    <style name="Theme.Lifetrack" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
         <!-- Primary brand color. -->
         <item name="android:textViewStyle">@style/ProximaBoldTextViewStyle</item>
         <item name="android:editTextStyle">@style/ProximaThinEditTextStyle</item>
@@ -28,4 +28,5 @@
     <style name="ProximaRegularButtonStyle" parent="android:Widget.Button">
         <item name="android:fontFamily">@font/proxima_nova_regular</item>
     </style>
+
 </resources>

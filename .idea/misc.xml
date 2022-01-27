@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BuildAttributionWarningsFilter">
+    <option name="noGCSettingWarning" value="true" />
+  </component>
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Todolistproject/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1125" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Todolistproject/app/src/main/res/drawable/button_green_rectangle_background.xml" value="0.11018518518518519" />
+        <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Todolistproject/app/src/main/res/drawable/delete_all_notes.xml" value="0.21510416666666668" />
+        <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Todolistproject/app/src/main/res/drawable/gradient_background.xml" value="0.18" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Todolistproject/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1125" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Todolistproject/app/src/main/res/drawable/rectangle.xml" value="0.11018518518518519" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Todolistproject/app/src/main/res/drawable/splash_background.xml" value="0.1" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Todolistproject/app/src/main/res/drawable/splash_screen.xml" value="0.1" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Todolistproject/app/src/main/res/layout/activity_main.xml" value="0.12590579710144928" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Todolistproject/app/src/main/res/layout/activity_splash_screen.xml" value="0.12590579710144928" />
-        <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Todolistproject/app/src/main/res/layout/fragment_board.xml" value="0.24477611940298508" />
+        <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Todolistproject/app/src/main/res/layout/fragment_board.xml" value="0.1" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Todolistproject/app/src/main/res/layout/fragment_create_notes.xml" value="0.1" />
-        <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Todolistproject/app/src/main/res/layout/fragment_create_task.xml" value="0.2" />
+        <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Todolistproject/app/src/main/res/layout/fragment_create_task.xml" value="0.18" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Todolistproject/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Todolistproject/app/src/main/res/layout/fragment_main_board.xml" value="0.15" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Todolistproject/app/src/main/res/layout/fragment_news.xml" value="0.1" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Todolistproject/app/src/main/res/layout/fragment_results.xml" value="0.1" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Todolistproject/app/src/main/res/layout/fragment_tasks.xml" value="0.1" />
+        <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Todolistproject/app/src/main/res/layout/gradient_background.xml" value="0.17708333333333334" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Todolistproject/app/src/main/res/layout/notes_holder.xml" value="0.2028985507246377" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Todolistproject/app/src/main/res/layout/repeat_dialog.xml" value="0.203125" />
         <entry key="..\:/Users/Clar1fy/AndroidStudioProjects/Todolistproject/app/src/main/res/menu/bottom_navigation.xml" value="0.203125" />
